@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+:root{
+    --pearl-white:#FFFDFC;
+    --pearl-pink:#FFEFF7;
+
+    --neon-blue:#00D9FF;
+    --electric-purple:#9D4DFF;
+
+    --dark:#2B2B2B;
+}
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+
+    background:
+    linear-gradient(
+        180deg,
+        var(--pearl-white),
+        var(--pearl-pink)
+    );
+
+    overflow-x:hidden;
+}
+
+/* Navigation */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--neon-blue),
+        var(--electric-purple)
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+/* Hero */
+
+.hero{
+    min-height:85vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--neon-blue),
+        var(--electric-purple)
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    max-width:800px;
+
+    margin-top:20px;
+
+    font-size:1.2rem;
+
+    color:#555;
+
+    line-height:1.8;
+}
+
+/* Story Section */
+
+.story{
+    padding:100px 10%;
+}
+
+.story-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+}
+
+.glass-card{
+    background:
+    rgba(255,255,255,0.55);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.7);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    transition:.3s;
+}
+
+.glass-card:hover{
+    transform:translateY(-8px);
+}
+
+.glass-card h2{
+    color:var(--electric-purple);
+
+    margin-bottom:15px;
+}
+
+/* Journey */
+
+.journey{
+    text-align:center;
+
+    padding:80px 20px;
+}
+
+.journey-btn{
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--neon-blue),
+        var(--electric-purple)
+    );
+
+    color:white;
+
+    font-size:1rem;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.journey-btn:hover{
+    transform:translateY(-5px);
+}
+
+/* Floating Glow */
+
+.glow{
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    z-index:-1;
+}
+
+.glow1{
+    width:300px;
+    height:300px;
+
+    background:
+    rgba(0,217,255,.20);
+
+    top:150px;
+    left:-120px;
+}
+
+.glow2{
+    width:350px;
+    height:350px;
+
+    background:
+    rgba(157,77,255,.18);
+
+    bottom:100px;
+    right:-120px;
+}
+
+footer{
+    text-align:center;
+
+    padding:30px;
+
+    color:#666;
+}
+
+</style>
+
+</head>
+
+<body>
+<div id="loader">
+    <div class="loader-logo">
+images/ssdh-logo.png
+    </div>
+</div>
+
+<div id="portal-transition"></div>
+
+<div id="stars"></div>
+
+<div id="particles"></div>
+
+<div id="butterfly-container"></div>
+
+<div class="cursor"></div>
+
+<div id="loader">
+
+<div class="glass-card reveal">
+
+```
+<div class="loader-logo">
+images/ssdh-logo.png
+</div>
+
+```
+</div>
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<nav>
+
+<div class="logo">
+images/ssdh-logo.png
+</div>
+
+<div class="nav-links">
+<a href="#" onclick="portalNavigation('index.html')">
+Home
+</a>
+<a href="#" onclick="portalNavigation('welcome.html')">
+Welcome
+</a>
+<a href="#" onclick="portalNavigate('about.html')">
+About
+</a>
+<a href="#" onclick="portalNavigate('gallery.html')">
+Gallery
+</a>
+<a href="#" onclick="portalNavigate('music.html')">
+Music
+</a>
+<a href="#" onclick="portalNavigate('observatory.html')">
+Observatory
+</a>
+</div>
+
+<button id="theme-toggle"> 🌙 </button>
+
+</nav>
+
+<div class="floating-icon"> ✨ </div>
+
+<section class="hero">
+<div class="crystal">
+    💎
+</div>
+
+<h1 class="gradient-text">
+Welcome
+</h1>
+
+<h1>Welcome</h1>
+
+<p>
+Welcome to a space built from creativity, curiosity and the
+belief that ideas deserve room to grow. Every page, every
+project and every experience begins with imagination.
+</p>
+
+</section>
+
+<section class="story">
+
+<div class="story-grid">
+
+<div class="glass-card">
+
+<h2>Our Story</h2>
+
+<p>
+What started as a simple idea grew into a vision. A place
+where creativity and technology can work together to create
+something meaningful and inspiring.
+</p>
+
+</div>
+
+<div class="glass-card">
+<h2>Our Vision</h2>
+
+<p>
+To build experiences that encourage exploration,
+innovation and discovery while keeping beauty and
+simplicity at the heart of everything.
+</p>
+
+</div>
+
+<div class="glass-card">
+<div class="glass-card reveal"></div>
+<h2>What You'll Find</h2>
+
+<p>
+Projects, ideas, inspiration and experiences designed
+to spark imagination and invite visitors into a world
+of possibilities.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="journey">
+
+<h2>Ready For The Next Chapter?</h2>
+
+<br>
+
+<button class="journey-btn"
+onclick="window.location.href='about.html'">
+
+Learn More About Us
+
+</button>
+
+</section>
+
+<div id="particles"></div>
+<div class="cursor"></div>
+
+<div id="butterfly-container"></div>
+
+<div id="stars"></div>
+
+<button id="music-btn"> 🎵 </button>
+
+<audio
+id="ambient-audio"
+loop>
+
+<source
+src="audio/ambient.mp3"
+type="audio/mpeg">
+
+</audio>
+
+<div class="crystal"> ✨ </div>
+
+<div id="portal-transition"></div>
+
+<footer>
+<p>
+© 2026 Company:Sassy Software Design House.Built with:ChatGPT.Dev/Designer:
+Sheralee Anne.All Rights Reserved.
+</p>
+<div class="designer-signature">
+    <img
+    src="images/salefevre-signature.png"
+    alt="SALefevre">
+</div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<button id="music-btn">🎵</button>
+
+<audio id="ambient-audio" loop>
+    <source src="audio/ambient.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
