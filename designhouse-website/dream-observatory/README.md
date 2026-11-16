@@ -2,7 +2,7 @@
 
 Interactive portfolio, museum store, music lounge and creative universe.
 
-Built by Sheralee Anne Lefevre.Build Tools:Chat GPT.Rapid CSS Editor.
+Built by Sheralee Anne Steyn.Build Tools:Chat GPT.Rapid CSS Editor.
 
 Version 1.0
 
@@ -31,6 +31,6 @@ A creative digital universe built by SALefevre.
 
 ## Creator
 
-SALefevre 💜🔥
+SAStetn 💜🔥
 
 Version 1.0
